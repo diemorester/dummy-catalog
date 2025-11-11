@@ -8,7 +8,7 @@ import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 import BalanceOutlinedIcon from '@mui/icons-material/BalanceOutlined';
-import PersonAdd from '@mui/icons-material/PersonAdd'
+import HistoryIcon from '@mui/icons-material/History';
 import Settings from '@mui/icons-material/Settings'
 import Logout from '@mui/icons-material/Logout'
 
@@ -88,6 +88,7 @@ export default function AccountMenu() {
                                 ml: -0.5,
                                 mr: 1,
                             },
+                            
                         },
                     },
                 }}
@@ -95,33 +96,34 @@ export default function AccountMenu() {
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
                 <MenuItem
-                sx={{
-                    fontWeight: 600,
-                    fontSize: '1.3rem',
-                }}
+                    sx={{
+                        fontWeight: 600,
+                        fontSize: '1.3rem',
+                    }}
                 >
                     <Avatar
-                    src="nyx.jpg"/> Marsha Mars
-                </MenuItem>
-                <MenuItem className='flex gap-x-3'>
-                    <BalanceOutlinedIcon /> Balance: 69
+                        src="nyx.jpg" /> Marsha Mars
                 </MenuItem>
                 <Divider />
-                <MenuItem>
-                    <ListItemIcon>
-                        <PersonAdd fontSize="small" />
-                    </ListItemIcon>
-                    Add another account
+                <MenuItem className='flex gap-x-3'>
+                    <BalanceOutlinedIcon sx={{ color: '#000000' }}/>
+                    Balance: 69
                 </MenuItem>
                 <MenuItem>
                     <ListItemIcon>
-                        <Settings fontSize="small" />
+                        <HistoryIcon fontSize="small" sx={{ color: '#000000' }} />
+                    </ListItemIcon>
+                    Transaction History
+                </MenuItem>
+                <MenuItem>
+                    <ListItemIcon>
+                        <Settings fontSize="small" sx={{ color: '#000000' }} />
                     </ListItemIcon>
                     Settings
                 </MenuItem>
                 <MenuItem>
                     <ListItemIcon>
-                        <Logout fontSize="small" />
+                        <Logout fontSize="small" sx={{ color: '#000000' }} />
                     </ListItemIcon>
                     Logout
                 </MenuItem>

@@ -39,7 +39,7 @@ export default function Navbar() {
         { name: "Home", id: "home" },
         { name: "What's New?", id: "new" },
         { name: "Explore", id: "explore" },
-        { name: "Contact", id: "contact" },
+        { name: "Contact", id: "footer" },
     ];
 
     return (
