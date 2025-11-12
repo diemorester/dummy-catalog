@@ -1,4 +1,4 @@
-import Explore from './components/Explore'
+import CategorySection from './components/CategorySection'
 import Footer from './components/Footer'
 import HeroSection from './components/HeroSection'
 import Navbar from './components/Navbar'
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <NewArrival />
-      <Explore />
+      <CategorySection />
       <Footer />
     </>
   )

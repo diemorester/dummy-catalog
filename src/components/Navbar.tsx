@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { IoCartOutline } from "react-icons/io5";
 import AccountMenu from "./AccountMenu";
+import CartDialog from "./CartDialog";
 
 export default function Navbar() {
     const [activeSection, setActiveSection] = useState("home");
@@ -38,7 +38,7 @@ export default function Navbar() {
     const navItems = [
         { name: "Home", id: "home" },
         { name: "What's New?", id: "new" },
-        { name: "Explore", id: "explore" },
+        { name: "Category", id: "category" },
         { name: "Contact", id: "footer" },
     ];
 
@@ -79,11 +79,7 @@ export default function Navbar() {
                     </a>
                 ))}
                 <div className="flex items-center gap-x-6">
-
-                    <IoCartOutline className="text-dummy-white hover:text-dummy-green active:scale-95 duration-500 transition-transform ease-in-out cursor-pointer" size={26} />
-                    {/* <div className="w-[27px] h-[27px]">
-                        <img src="nyx.jpg" className="cursor-pointer w-full h-full rounded-full scale-110 active:scale-100 object-cover border border-dummy-white hover:border-dummy-green duration-300 transition-transform ease-in-out" />
-                    </div> */}
+                    <CartDialog />
                     <AccountMenu />
                 </div>
             </div>
