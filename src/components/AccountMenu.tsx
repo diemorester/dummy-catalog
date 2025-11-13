@@ -52,7 +52,7 @@ export default function AccountMenu() {
                 >
                     <Avatar
                         alt="Profile"
-                        src="nyx.jpg"
+                        src="/nyx.jpg"
                         sx={{
                             width: 34,
                             height: 34,
@@ -102,7 +102,7 @@ export default function AccountMenu() {
                     }}
                 >
                     <Avatar
-                        src="nyx.jpg" /> Marsha Mars
+                        src="/nyx.jpg" /> Marsha Mars
                 </MenuItem>
                 <Divider />
                 <MenuItem className='flex gap-x-3'>

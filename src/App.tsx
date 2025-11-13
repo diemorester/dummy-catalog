@@ -1,20 +1,21 @@
-import CategorySection from './components/CategorySection'
-import Footer from './components/Footer'
-import HeroSection from './components/HeroSection'
-import Navbar from './components/Navbar'
-import NewArrival from './components/NewArrival'
+import { Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+import CategoryPage from "./pages/CategoryPage"
+import Navbar from "./components/Navbar"
+import ProductPage from "./pages/ProductPage"
 
 function App() {
 
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <NewArrival />
-      <CategorySection />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/category/:slug" element={<CategoryPage />} />
+        <Route path="/products/:productSlug" element={<ProductPage />} />
+      </Routes>
     </>
   )
-}
+};
 
 export default App

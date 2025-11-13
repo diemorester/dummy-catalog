@@ -19,6 +19,7 @@ export type ProductType = {
     category: keyof typeof Category;
     price: number;
     description: string;
+    slug: string;
 };
 
 export type CartItem = {

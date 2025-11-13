@@ -90,7 +90,7 @@ export default function CartDialog() {
                                     <div className="flex items-center">
                                         
                                             <img
-                                                src={item.image}
+                                                src={`/${item.image}`}
                                                 alt={item.name}
                                                 className="w-16 h-16 pt-2 object-contain"
                                             />
