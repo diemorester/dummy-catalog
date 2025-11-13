@@ -18,12 +18,12 @@ export default function ProductPage() {
 
     return (
         <div className="min-h-screen px-6 pt-28 pb-6">
-            <button onClick={() => navigate(-1)} className="mb-4 text-black">
+            <button onClick={() => navigate(-1)} className="md:mt-9 text-black">
                 <FaArrowLeftLong />
             </button>
             <div className="flex flex-col md:flex-row gap-6 pr-6">
                 <img src={`/${product.image}`} alt={product.name} className="w-96 h-96 object-contain rounded-lg" />
-                <div className="flex flex-col justify-between gap-7">
+                <div className="flex flex-col justify-between">
                     <div>
                         <h1 className="text-xl md:text-3xl font-bold mb-3">{product.name}</h1>
                         <p className="text-sm md:text-base px-1 text-gray-700">{product.description}</p>

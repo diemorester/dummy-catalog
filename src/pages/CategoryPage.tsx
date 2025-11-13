@@ -7,6 +7,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { HiOutlinePlusCircle } from "react-icons/hi";
 import { useSnackbar } from "notistack";
 import type { ProductType } from "../lib/types";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 export default function CategoryPage() {
     const { slug } = useParams();
@@ -44,7 +45,10 @@ export default function CategoryPage() {
     };
 
     return (
-        <div className="min-h-screen bg-dummy-white px-6 pt-28 flex">
+        <div className="min-h-screen bg-dummy-white px-6 pt-28">
+            <button onClick={() => navigate(-1)} className=" text-black">
+                <FaArrowLeftLong />
+            </button>
             {filteredProducts.length === 0 ? (
                 <div className="w-full min-h-screen place-content-center text-center">
                     <p className="">
@@ -76,9 +80,9 @@ export default function CategoryPage() {
                                             Rp {product.price.toLocaleString("id-ID")}
                                         </p>
                                         <div className="flex justify-end gap-x-3 md:gap-x-12">
-                                            <button 
-                                            onClick={() => navigate(`/products/${product.slug}`)}
-                                            className="flex items-center gap-x-1 hover:-translate-y-1 transition transform ease-in-out duration-200"
+                                            <button
+                                                onClick={() => navigate(`/products/${product.slug}`)}
+                                                className="flex items-center gap-x-1 hover:-translate-y-1 transition transform ease-in-out duration-200"
                                             >
                                                 <MdArrowOutward fill="#09A295" className="mt-1" size={20} />
                                                 <p>view more</p>
@@ -87,8 +91,8 @@ export default function CategoryPage() {
                                                 onClick={() => handleAddToCart(product)}
                                                 disabled={disabledId === product.id}
                                                 className={`flex items-center gap-x-1 transition transform ease-in-out duration-200 ${disabledId === product.id
-                                                        ? "opacity-50 cursor-not-allowed"
-                                                        : "hover:-translate-y-1"
+                                                    ? "opacity-50 cursor-not-allowed"
+                                                    : "hover:-translate-y-1"
                                                     }`}
                                             >
                                                 <HiOutlinePlusCircle stroke="#09A295" className="mt-0.5" size={20} />
