@@ -29,7 +29,7 @@ export default function Navbar() {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     sections.forEach((section) => observer.observe(section));

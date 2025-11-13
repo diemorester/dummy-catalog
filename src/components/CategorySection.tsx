@@ -48,6 +48,7 @@ export default function CategorySection() {
                         <img
                             src={categoryImages[index]}
                             alt={cat.label}
+                            loading="lazy"
                             className="object-fill w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105 overflow-hidden"
                         />
                         <div className="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors duration-300" />
