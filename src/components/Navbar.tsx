@@ -40,7 +40,7 @@ export default function Navbar() {
     { name: "Home", id: "home" },
     { name: "What's New?", id: "new" },
     { name: "Category", id: "category" },
-    { name: "Contact", id: "footer" },
+    // { name: "Contact", id: "footer" },
   ];
 
   const handleNavClick = (id: string) => {
@@ -64,13 +64,12 @@ export default function Navbar() {
           : "bg-black"
         }`}
     >
-      <button
+      <img
+        src="/logo.svg"
+        alt="logo"
         onClick={() => navigate("/")}
-        className="text-center transition transform ease-in-out active:scale-95 text-xl md:text-3xl leading-none text-dummy-green font-bold"
-      >
-        M
-      </button>
-
+        className="w-10 h-10 active:scale-95 cursor-pointer relative z-999"
+      />
       <div className="flex gap-x-5 items-center">
         {navItems.map((item) => (
           <button
