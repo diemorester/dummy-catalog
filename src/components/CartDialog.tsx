@@ -159,7 +159,7 @@ export default function CartDialog() {
                     ) : (
                         <div className="w-full text-center">
                             <a href="#category" onClick={handleClose}>
-                                <button className="rounded-lg px-1.5 text-sm md:text-base md:px-8 py-2 md:py-2.5 text-dummy-white bg-dummy-green hover:brightness-90">Add to Cart</button>
+                                <button className="rounded-lg px-1.5 text-sm md:text-base md:px-8 py-2 md:py-2.5 text-dummy-white bg-dummy-green hover:brightness-90">EXPLORE NOW</button>
                             </a>
                         </div>
                     )}

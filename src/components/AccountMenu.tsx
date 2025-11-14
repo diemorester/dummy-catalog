@@ -52,7 +52,8 @@ export default function AccountMenu() {
                 >
                     <Avatar
                         alt="Profile"
-                        src="/nyx.jpg"
+                        src="/avatar.jpg"
+                        className='object-cover'
                         sx={{
                             width: 34,
                             height: 34,
@@ -102,12 +103,12 @@ export default function AccountMenu() {
                     }}
                 >
                     <Avatar
-                        src="/nyx.jpg" /> Marsha Mars
+                        src="/avatar.jpg" /> Lord Vader
                 </MenuItem>
                 <Divider />
                 <MenuItem className='flex gap-x-3'>
                     <BalanceOutlinedIcon sx={{ color: '#000000' }}/>
-                    Balance: 69
+                    Balance: 666
                 </MenuItem>
                 <MenuItem>
                     <ListItemIcon>

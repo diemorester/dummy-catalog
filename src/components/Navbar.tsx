@@ -29,7 +29,7 @@ export default function Navbar() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.5 }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -56,14 +56,19 @@ export default function Navbar() {
 
   return (
     <div
-      className={`flex justify-between py-3 px-3 md:px-5 fixed w-full left-0 top-0
-          ${isScrolled ? "bg-black/80" : "bg-black"} z-50`}
+      className={`flex justify-between py-3 px-3 md:px-5 fixed w-full left-0 top-0 z-50 
+        ${isHome
+          ? isScrolled
+            ? "bg-black/80"
+            : "bg-transparent"
+          : "bg-black"
+        }`}
     >
       <button
         onClick={() => navigate("/")}
         className="text-center transition transform ease-in-out active:scale-95 text-xl md:text-3xl leading-none text-dummy-green font-bold"
       >
-        J&nbsp;C<br />WD
+        M
       </button>
 
       <div className="flex gap-x-5 items-center">
@@ -71,22 +76,19 @@ export default function Navbar() {
           <button
             key={item.id}
             onClick={() => handleNavClick(item.id)}
-            className={`relative hidden md:block md:min-w-20 min-h-12 text-center place-content-center active:scale-95 text-dummy-white overflow-hidden ${
-              activeSection === item.id ? "text-dummy-green" : "group hover:text-dummy-white transition duration-300"
-            }`}
+            className={`relative hidden md:block md:min-w-20 min-h-12 text-center place-content-center active:scale-95 text-dummy-white overflow-hidden ${activeSection === item.id ? "text-dummy-green" : "group hover:text-dummy-white transition duration-300"
+              }`}
           >
             <div className="relative overflow-hidden">
               <span
-                className={`block transition-transform duration-300 ease-in-out ${
-                  activeSection === item.id ? "text-dummy-green" : "group-hover:-translate-y-6"
-                }`}
+                className={`block transition-transform duration-300 ease-in-out ${activeSection === item.id ? "text-dummy-green" : "group-hover:-translate-y-6"
+                  }`}
               >
                 {item.name}
               </span>
               <span
-                className={`absolute left-0 top-6 w-full text-dummy-green transition-transform duration-300 ease-in-out ${
-                  activeSection === item.id ? "hidden" : "group-hover:-translate-y-6"
-                }`}
+                className={`absolute left-0 top-6 w-full text-dummy-green transition-transform duration-300 ease-in-out ${activeSection === item.id ? "hidden" : "group-hover:-translate-y-6"
+                  }`}
               >
                 {item.name}
               </span>

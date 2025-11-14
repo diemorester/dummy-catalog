@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
 @theme {
   --color-dummy-green: #09A295;
   --color-dummy-white: #F8F8FF;
@@ -18,4 +22,17 @@ a, button {
 * {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #09A295 !important; /* dummy-green mu */
+  pointer-events: auto !important;
+}
+
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
 }
